@@ -1,0 +1,20 @@
+
+.container
+    br
+    h3 Book Details
+    .row.thumbnail
+        .col-sm-2.thumn
+            img src="/150.png" alt="..."
+        .col-sm-10
+            .caption.item-body
+                h4 = @book.name
+                h5 
+                    span by &nbsp
+                    = @book.author
+                p =  @book.price
+                p = @book.desc
+
+
+//=> link_to 'Edit', edit_book_path(@book)
+//'|
+//=< link_to 'Back', books_path

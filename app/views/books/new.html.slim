@@ -1,0 +1,23 @@
+= simple_form_for @book do |f|
+    .container
+        h2 New Book
+        hr
+        f.error_notification
+        form.col-sm-12
+            .form-group
+                = f.label :book_name
+                = f.input_field :name, class: 'form-control'
+            .form-group
+                = f.label :author
+                = f.input_field :author, class: 'form-control'
+            .form-group
+                = f.label :price
+                = f.input_field :price, class: 'form-control'
+            .form-group
+                = f.label :description
+                = f.input_field :desc, class: 'form-control'
+            .form-group
+                = f.label :short_Description
+                = f.input_field :short_desc, class: 'form-control'
+            .form-group
+                = f.submit 'Add Book', class: 'btn btn-primary'

@@ -1,0 +1,28 @@
+.navbar.navbar-inverse: .container
+  .navbar-header
+    button.navbar-toggle.collapsed type="button" data-toggle="collapse" data-target="#c1"
+      span.sr-only Toggle navigation
+      span.icon-bar
+      span.icon-bar
+      span.icon-bar
+    a.navbar-brand href="#" Online Reading
+  .collapse.navbar-collapse#c1
+    form.navbar-form.navbar-right role="search"
+      .input-group
+        input.form-control type="search" placeholder="Search..."
+        .input-group-btn: button.btn.btn-primary type="submit" Go
+
+.container
+    h3 Popular Books
+    hr
+    .row.container
+        - @books.each do |book|
+            .col-sm-2.thumbnail.item
+                    img src="/150.png" alt="..." class=""
+                    .caption
+                        h4 = book.name
+                        //p.card-text =  book.price
+                        p.wrap-content = book.short_desc
+                        = link_to  "View", book, class:"btn btn-default"
+
+//= link_to 'New Book', new_book_path
